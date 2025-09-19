@@ -1,0 +1,467 @@
+/* 视频页面样式 */
+.video-page {
+  padding: 20px;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+}
+
+/* 搜索卡片 */
+.search-card {
+  margin-bottom: 20px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+.search-form {
+  margin-bottom: 0;
+}
+
+.search-form .el-form-item {
+  margin-bottom: 0;
+}
+
+/* 表格卡片 */
+.table-card {
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #303133;
+}
+
+.card-title i {
+  margin-right: 8px;
+  color: #409eff;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* 文件信息样式 */
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.file-icon {
+  color: #409eff;
+  font-size: 16px;
+}
+
+.file-name {
+  font-weight: 500;
+  color: #303133;
+}
+
+/* 分页容器 */
+.pagination-container {
+  margin-top: 20px;
+  text-align: right;
+}
+
+/* 视频预览容器 */
+.video-preview-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.video-preview-container video {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.video-info {
+  background: #f8f9fa;
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 4px solid #409eff;
+}
+
+.video-info h4 {
+  margin: 0 0 12px 0;
+  color: #303133;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.video-info p {
+  margin: 8px 0;
+  color: #606266;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.video-info strong {
+  color: #303133;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+/* 表格样式优化 */
+.el-table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.el-table th {
+  background-color: #f5f7fa !important;
+  color: #606266 !important;
+  font-weight: 600;
+}
+
+.el-table td {
+  padding: 12px 0;
+}
+
+.el-table .el-button {
+  margin-right: 8px;
+}
+
+.el-table .el-button:last-child {
+  margin-right: 0;
+}
+
+/* 标签样式 */
+.el-tag {
+  font-weight: 500;
+}
+
+/* 操作按钮样式优化 */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  min-width: 70px;
+  height: 28px;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  font-weight: 500;
+}
+
+.action-btn:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.action-btn:hover:before {
+  left: 100%;
+}
+
+.preview-btn {
+  background: linear-gradient(135deg, #409EFF 0%, #66b1ff 100%);
+  border: 1px solid #409EFF;
+  color: white;
+  box-shadow: 0 2px 8px rgba(64, 158, 255, 0.3);
+}
+
+.preview-btn:hover {
+  background: linear-gradient(135deg, #66b1ff 0%, #409EFF 100%);
+  border-color: #66b1ff;
+  box-shadow: 0 4px 12px rgba(64, 158, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.download-btn {
+  background: linear-gradient(135deg, #67c23a 0%, #85ce61 100%);
+  border: 1px solid #67c23a;
+  color: white;
+  box-shadow: 0 2px 8px rgba(103, 194, 58, 0.3);
+}
+
+.download-btn:hover {
+  background: linear-gradient(135deg, #85ce61 0%, #67c23a 100%);
+  border-color: #85ce61;
+  box-shadow: 0 4px 12px rgba(103, 194, 58, 0.4);
+  transform: translateY(-1px);
+}
+
+.action-btn:active {
+  transform: translateY(0);
+}
+
+/* 表格样式优化 */
+.theme-table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.theme-table .el-table__header-wrapper {
+  border-radius: 8px 8px 0 0;
+}
+
+.theme-table .el-table__body-wrapper {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.theme-table .el-table__row:hover {
+  background-color: rgba(64, 158, 255, 0.05);
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.file-icon {
+  font-size: 16px;
+  color: #409EFF;
+}
+
+.file-name {
+  font-weight: 500;
+  color: #303133;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+  .action-buttons {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .action-btn {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .theme-table {
+    font-size: 12px;
+  }
+  
+  .theme-table .el-table__cell {
+    padding: 8px 4px;
+  }
+  
+  .file-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .file-name {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+  
+  .action-btn {
+    font-size: 11px;
+    padding: 3px 6px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-page {
+    padding: 10px;
+  }
+  
+  .theme-table {
+    font-size: 11px;
+  }
+  
+  .search-form .el-form-item {
+    margin-bottom: 10px;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  
+  .header-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/* 视频操作按钮样式 */
+.video-action-btn {
+  margin-right: 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  padding: 6px 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-action-btn:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.video-action-btn:hover:before {
+  left: 100%;
+}
+
+.video-action-btn i {
+  margin-right: 4px;
+  font-size: 12px;
+}
+
+.theme-button-success {
+  background: linear-gradient(135deg, #67c23a 0%, #85ce61 100%);
+  border: 1px solid #67c23a;
+  color: white;
+  box-shadow: 0 2px 8px rgba(103, 194, 58, 0.3);
+}
+
+.theme-button-success:hover {
+  background: linear-gradient(135deg, #85ce61 0%, #67c23a 100%);
+  border-color: #85ce61;
+  box-shadow: 0 4px 12px rgba(103, 194, 58, 0.4);
+  transform: translateY(-1px);
+}
+
+.theme-button-success:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(103, 194, 58, 0.3);
+}
+
+/* 对话框样式 */
+.el-dialog {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.el-dialog__header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+}
+
+.el-dialog__title {
+  color: white;
+  font-weight: 600;
+}
+
+.el-dialog__headerbtn .el-dialog__close {
+  color: white;
+  font-size: 18px;
+}
+
+.el-dialog__body {
+  padding: 20px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .video-page {
+    padding: 10px;
+  }
+  
+  .search-form {
+    flex-direction: column;
+  }
+  
+  .search-form .el-form-item {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  
+  .header-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  
+  .el-table .el-button {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+}
+
+/* 加载状态 */
+.el-loading-mask {
+  border-radius: 8px;
+}
+
+/* 空状态 */
+.el-table__empty-block {
+  padding: 40px 0;
+}
+
+.el-table__empty-text {
+  color: #909399;
+  font-size: 14px;
+}
+
+/* 动画效果 */
+.el-card {
+  transition: all 0.3s ease;
+}
+
+.el-card:hover {
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+}
+
+.el-button {
+  transition: all 0.3s ease;
+}
+
+.el-tag {
+  transition: all 0.3s ease;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}

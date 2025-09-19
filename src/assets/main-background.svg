@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#98D8E8;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#B0E0E6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0F6FF;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="mountainGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A5568;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2D3748;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A202C;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="sunGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#FFA500;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:0.6" />
+    </radialGradient>
+    
+    <filter id="cloudShadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="rgba(0,0,0,0.1)"/>
+    </filter>
+  </defs>
+  
+  <!-- Sky background -->
+  <rect width="1920" height="1080" fill="url(#skyGradient)"/>
+  
+  <!-- Sun -->
+  <circle cx="1600" cy="200" r="80" fill="url(#sunGradient)" opacity="0.9"/>
+  
+  <!-- Clouds -->
+  <g filter="url(#cloudShadow)">
+    <!-- Cloud 1 -->
+    <ellipse cx="300" cy="150" rx="60" ry="30" fill="white" opacity="0.8"/>
+    <ellipse cx="320" cy="140" rx="40" ry="25" fill="white" opacity="0.8"/>
+    <ellipse cx="340" cy="155" rx="50" ry="28" fill="white" opacity="0.8"/>
+    
+    <!-- Cloud 2 -->
+    <ellipse cx="800" cy="120" rx="70" ry="35" fill="white" opacity="0.7"/>
+    <ellipse cx="825" cy="110" rx="45" ry="28" fill="white" opacity="0.7"/>
+    <ellipse cx="850" cy="125" rx="55" ry="30" fill="white" opacity="0.7"/>
+    
+    <!-- Cloud 3 -->
+    <ellipse cx="1200" cy="180" rx="50" ry="25" fill="white" opacity="0.6"/>
+    <ellipse cx="1220" cy="170" rx="35" ry="20" fill="white" opacity="0.6"/>
+    <ellipse cx="1240" cy="185" rx="40" ry="22" fill="white" opacity="0.6"/>
+  </g>
+  
+  <!-- Mountains -->
+  <polygon points="0,600 200,400 400,500 600,350 800,450 1000,300 1200,400 1400,250 1600,350 1800,200 1920,300 1920,1080 0,1080" fill="url(#mountainGradient)" opacity="0.8"/>
+  
+  <!-- Hills -->
+  <polygon points="0,700 300,600 600,650 900,580 1200,620 1500,560 1800,600 1920,580 1920,1080 0,1080" fill="#68D391" opacity="0.6"/>
+  
+  <!-- Foreground hills -->
+  <polygon points="0,800 400,750 800,780 1200,720 1600,760 1920,740 1920,1080 0,1080" fill="#48BB78" opacity="0.7"/>
+  
+  <!-- Trees silhouettes -->
+  <g opacity="0.4">
+    <!-- Tree 1 -->
+    <polygon points="150,800 160,700 170,800" fill="#2F855A"/>
+    <circle cx="160" cy="720" r="25" fill="#38A169"/>
+    
+    <!-- Tree 2 -->
+    <polygon points="500,820 510,720 520,820" fill="#2F855A"/>
+    <circle cx="510" cy="740" r="30" fill="#38A169"/>
+    
+    <!-- Tree 3 -->
+    <polygon points="1100,780 1110,680 1120,780" fill="#2F855A"/>
+    <circle cx="1110" cy="700" r="28" fill="#38A169"/>
+    
+    <!-- Tree 4 -->
+    <polygon points="1500,800 1510,700 1520,800" fill="#2F855A"/>
+    <circle cx="1510" cy="720" r="32" fill="#38A169"/>
+  </g>
+  
+  <!-- Subtle pattern overlay -->
+  <rect width="1920" height="1080" fill="url(data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-opacity='0.03'%3E%3Cpolygon fill='%23000' points='50 0 60 40 100 50 60 60 50 100 40 60 0 50 40 40'/%3E%3C/g%3E%3C/svg%3E)" opacity="0.5"/>
+</svg>

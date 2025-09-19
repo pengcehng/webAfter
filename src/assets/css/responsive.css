@@ -1,0 +1,218 @@
+/* 全局响应式样式 */
+
+/* 表格响应式设计 */
+@media (max-width: 768px) {
+    .el-table {
+        font-size: 0.875rem;
+    }
+    
+    .el-table .el-table__header-wrapper,
+    .el-table .el-table__body-wrapper {
+        overflow-x: auto;
+    }
+    
+    .el-table__row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .el-table__cell {
+        min-width: 120px;
+        padding: 8px 4px;
+        word-wrap: break-word;
+        white-space: normal;
+    }
+    
+    /* 操作按钮响应式 */
+    .el-button--mini {
+        padding: 4px 8px;
+        font-size: 0.75rem;
+        margin: 2px;
+    }
+    
+    /* 表格列宽度调整 */
+    .el-table-column {
+        min-width: 100px !important;
+    }
+}
+
+/* 表单响应式设计 */
+@media (max-width: 768px) {
+    .el-form--inline .el-form-item {
+        display: block;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+    
+    .el-form-item__content {
+        margin-left: 0 !important;
+    }
+    
+    .el-input,
+    .el-select,
+    .el-date-editor {
+        width: 100% !important;
+    }
+    
+    .el-button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* 对话框响应式设计 */
+@media (max-width: 768px) {
+    .el-dialog {
+        width: 95% !important;
+        margin: 0 auto;
+    }
+    
+    .el-dialog__body {
+        padding: 1rem;
+    }
+    
+    .el-dialog__header {
+        padding: 1rem 1rem 0.5rem;
+    }
+    
+    .el-dialog__footer {
+        padding: 0.5rem 1rem 1rem;
+    }
+}
+
+/* 分页器响应式设计 */
+@media (max-width: 768px) {
+    .el-pagination {
+        text-align: center;
+        padding: 1rem 0;
+    }
+    
+    .el-pagination .el-pager li {
+        min-width: 28px;
+        height: 28px;
+        line-height: 28px;
+        font-size: 0.875rem;
+    }
+    
+    .el-pagination .btn-prev,
+    .el-pagination .btn-next {
+        min-width: 28px;
+        height: 28px;
+        line-height: 28px;
+    }
+}
+
+/* 卡片响应式设计 */
+@media (max-width: 768px) {
+    .el-card {
+        margin-bottom: 1rem;
+    }
+    
+    .el-card__body {
+        padding: 1rem;
+    }
+}
+
+/* 统计卡片响应式 */
+@media (max-width: 768px) {
+    .stats-card {
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+/* 图表响应式设计 */
+@media (max-width: 768px) {
+    .chart-container {
+        height: 300px !important;
+        margin-bottom: 1rem;
+    }
+}
+
+/* 工具提示响应式 */
+@media (max-width: 768px) {
+    .el-tooltip__popper {
+        max-width: 250px;
+        font-size: 0.875rem;
+    }
+}
+
+/* 消息提示响应式 */
+@media (max-width: 768px) {
+    .el-message {
+        min-width: 280px;
+        max-width: 90vw;
+    }
+    
+    .el-notification {
+        width: 90vw;
+        max-width: 330px;
+    }
+}
+
+/* 加载动画响应式 */
+@media (max-width: 768px) {
+    .el-loading-mask {
+        .el-loading-spinner {
+            margin-top: -25px;
+        }
+        
+        .el-loading-text {
+            font-size: 0.875rem;
+        }
+    }
+}
+
+/* 通用间距调整 */
+@media (max-width: 768px) {
+    .el-main {
+        padding: 1rem !important;
+    }
+    
+    .el-footer {
+        padding: 0.5rem 1rem !important;
+        font-size: 0.875rem;
+    }
+    
+    /* 减少边距和内边距 */
+    .page-container {
+        padding: 0.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* 超小屏幕适配 */
+@media (max-width: 480px) {
+    .el-dialog {
+        width: 98% !important;
+    }
+    
+    .el-table__cell {
+        min-width: 100px;
+        padding: 6px 2px;
+        font-size: 0.8rem;
+    }
+    
+    .el-button--mini {
+        padding: 2px 6px;
+        font-size: 0.7rem;
+    }
+    
+    .el-form-item__label {
+        font-size: 0.875rem;
+    }
+    
+    .el-input__inner {
+        font-size: 0.875rem;
+        padding: 0 10px;
+    }
+}

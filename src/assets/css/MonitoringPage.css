@@ -1,0 +1,713 @@
+/* 监控页面专用样式 */
+
+/* 主内容区域 */
+.el-main {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    flex: 1;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.el-main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="%23e2e8f0" stroke-width="1" opacity="0.3"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>') repeat;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* 页眉样式 */
+.el-header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 10;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+.el-header h2 {
+    margin: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    font-size: 1.75rem;
+    letter-spacing: -0.025em;
+}
+
+/* Logo容器样式 */
+.logo-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.logo-container i {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-right: 0.75rem;
+    filter: drop-shadow(0 2px 4px rgba(102, 126, 234, 0.2));
+}
+
+/* 页脚样式 */
+.el-footer {
+    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+    color: #f7fafc;
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    font-weight: 500;
+    position: relative;
+}
+
+.el-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="footerdots" width="15" height="15" patternUnits="userSpaceOnUse"><circle cx="7.5" cy="7.5" r="0.5" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23footerdots)"/></svg>') repeat;
+    pointer-events: none;
+}
+
+/* 视频卡片样式 */
+.video-card {
+    border-radius: 1.5rem;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12), 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.95) 100%);
+    backdrop-filter: blur(25px);
+    position: relative;
+    z-index: 1;
+    transform-origin: center;
+}
+
+.video-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.18), 0 8px 25px rgba(102, 126, 234, 0.15);
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+.video-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* 卡片内容 */
+.card-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* 视频卡片头部 */
+.video-card-header {
+    padding: 1.25rem 1.5rem;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.video-title {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: var(--gray-800);
+}
+
+.video-name {
+    font-size: 1.1rem;
+    letter-spacing: -0.025em;
+}
+
+/* 视频容器 */
+.video-container {
+    padding: 1.5rem;
+    position: relative;
+}
+
+.video-wrapper {
+    position: relative;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.video-wrapper:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transform: scale(1.02);
+}
+
+/* 视频覆盖层 */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1.25rem;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.3) 50%, transparent 100%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    backdrop-filter: blur(8px);
+}
+
+.video-wrapper:hover .video-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.video-overlay {
+    transform: translateY(-10px);
+}
+
+.video-location, .video-quality {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.video-quality.high {
+    background: rgba(16, 185, 129, 0.8);
+}
+
+.video-quality.medium {
+    background: rgba(245, 158, 11, 0.8);
+}
+
+.video-quality.low {
+    background: rgba(239, 68, 68, 0.8);
+}
+
+/* 主视频样式 */
+.main-video {
+    width: 100%;
+    height: auto;
+    min-height: 240px;
+    border-radius: 1rem;
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 50%, #4a5568 100%);
+    object-fit: cover;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.main-video:hover {
+    transform: scale(1.01);
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1), 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 视频操作按钮区域 */
+.video-actions {
+    padding: 1rem 1.5rem;
+    background: rgba(248, 250, 252, 0.8);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+/* 按钮样式重写 */
+.el-button {
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.el-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.el-button:hover::before {
+    left: 100%;
+}
+
+.el-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.el-button:active {
+    transform: translateY(-1px);
+}
+
+.el-button--primary {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.el-button--primary:hover {
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.el-button--success {
+    background: linear-gradient(135deg, var(--success-color) 0%, var(--success-hover) 100%);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.el-button--success:hover {
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+}
+
+.el-button--info {
+    background: linear-gradient(135deg, var(--gray-500) 0%, var(--gray-600) 100%);
+    box-shadow: 0 4px 15px rgba(107, 114, 128, 0.3);
+}
+
+.el-button--info:hover {
+    box-shadow: 0 8px 25px rgba(107, 114, 128, 0.4);
+}
+
+.el-button.is-circle {
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.el-button-group {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+/* 标签样式 */
+.el-tag {
+    border-radius: 0.5rem;
+    font-weight: 500;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.el-tag--success {
+    background: linear-gradient(135deg, var(--success-light) 0%, rgba(16, 185, 129, 0.2) 100%);
+    color: var(--success-hover);
+}
+
+.el-tag--info {
+    background: linear-gradient(135deg, var(--primary-light) 0%, rgba(59, 130, 246, 0.2) 100%);
+    color: var(--primary-hover);
+}
+
+/* 加载状态 */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    color: var(--gray-500);
+}
+
+.loading-container i {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* 视频网格布局 */
+.video-grid {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+.video-container-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+/* 响应式网格 - 每行5个 */
+@media (max-width: 768px) {
+    .video-container-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .video-container-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .video-container-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (min-width: 1441px) {
+    .video-container-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+    }
+}
+
+/* 淡入动画 */
+.fade-list-enter-active, .fade-list-leave-active {
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-list-enter, .fade-list-leave-to {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+}
+
+.fade-list-enter-to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* 画质评分样式 */
+.quality-good {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+    color: white !important;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+.quality-medium {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+    color: white !important;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+}
+
+.quality-poor {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%) !important;
+    color: white !important;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+/* 状态指示器 */
+.status-indicator {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    animation: pulse-status 2s infinite;
+}
+
+.status-online {
+    background: #10b981;
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+}
+
+.status-offline {
+    background: #ef4444;
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+}
+
+.status-maintenance {
+    background: #f59e0b;
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7);
+}
+
+@keyframes pulse-status {
+    0% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    }
+}
+
+/* 设备信息样式 */
+.device-info {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.video-wrapper:hover .device-info {
+    opacity: 1;
+}
+
+.device-id {
+    background: rgba(0, 0, 0, 0.8);
+    color: #10b981;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-family: 'Courier New', monospace;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.resolution {
+    background: rgba(0, 0, 0, 0.8);
+    color: #f59e0b;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+/* 录制的视频样式增强 */
+.recorded-videos {
+  margin-top: 24px;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.recorded-video-item {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.recorded-video-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(103, 126, 234, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.recorded-video-item:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.06) 100%);
+  border-color: rgba(103, 126, 234, 0.4);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(103, 126, 234, 0.2);
+}
+
+.recorded-video-item:hover::before {
+  opacity: 1;
+}
+
+.recorded-video {
+  width: 100%;
+  height: 220px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.recorded-video:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.recorded-video-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.video-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.recorded-video-label {
+  color: #e2e8f0;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+}
+
+.record-time {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  opacity: 0.8;
+}
+
+/* 空状态样式 */
+.el-empty {
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    border-radius: 1rem;
+    margin: 2rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* 工具提示样式 */
+.el-tooltip__popper {
+    background: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.el-tooltip__popper .popper__arrow {
+    border-top-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .video-card-header {
+        padding: 1rem;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+    
+    .video-container {
+        padding: 1rem;
+    }
+    
+    .video-actions {
+        padding: 1rem;
+    }
+    
+    .action-buttons {
+        gap: 0.5rem;
+    }
+    
+    .el-button.is-circle {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+/* 分页器样式 */
+.el-pagination {
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px 0;
+}
+
+.el-pagination .el-pager li {
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.el-pagination .el-pager li.active {
+    background-color: #409EFF;
+    color: #fff;
+}
+
+/* 加载状态 */
+.el-icon-loading {
+    color: #409EFF;
+    animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 1200px) {
+    .el-col {
+        width: 50% !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .el-col {
+        width: 100% !important;
+    }
+    
+    .el-header h2 {
+        font-size: 1.2rem;
+    }
+    
+    .el-button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
